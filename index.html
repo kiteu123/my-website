@@ -23,7 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script
       type="text/javascript"
-      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=46a54ddfd54de71d9be6f1ed0c64e730&autoload=false"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=46a54ddfd54de71d9be6f1ed0c64e730"
     ></script>
   </head>
   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
@@ -666,18 +666,16 @@
   }
 </script>
 <script>
-  window.onload = function () {
-    kakao.maps.load(function () {
-      var container = document.getElementById("map");
-      var options = {
-        center: new kakao.maps.LatLng(37.485997, 126.897464),
-        level: 3,
-      };
-      var map = new kakao.maps.Map(container, options);
+  kakao.maps.load(function () {
+    var container = document.getElementById("map");
+    var options = {
+      center: new kakao.maps.LatLng(37.485997, 126.897464),
+      level: 3,
+    };
+    var map = new kakao.maps.Map(container, options);
 
-      var markerPosition = new kakao.maps.LatLng(37.485997, 126.897464);
-      var marker = new kakao.maps.Marker({ position: markerPosition });
-      marker.setMap(map);
-    });
-  };
+    var markerPosition = new kakao.maps.LatLng(37.485997, 126.897464);
+    var marker = new kakao.maps.Marker({ position: markerPosition });
+    marker.setMap(map);
+  });
 </script>
