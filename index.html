@@ -23,7 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script
       type="text/javascript"
-      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=46a54ddfd54de71d9be6f1ed0c64e730&autoload=false"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=46a54ddfd54de71d9be6f1ed0c64e730"
     ></script>
   </head>
   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
@@ -480,12 +480,7 @@
       <div class="col-6">
         <div
           id="map"
-          style="
-            width: 100%;
-            height: 400px;
-            margin-top: 50px;
-            min-height: 400px;
-          "
+          style="width: 100%; height: 400px; margin-top: 50px"
         ></div>
       </div>
     </div>
@@ -623,84 +618,67 @@
       </div>
     </footer>
   </body>
-  <script>
-    const actualSlideCount = 6;
-
-    const swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      slidesPerGroup: 1,
-      loop: true,
-      loopedSlides: 3,
-      navigation: {
-        nextEl: ".swiper-button-prev",
-        prevEl: ".swiper-button-next",
-      },
-      on: {
-        init: function () {
-          const indicator = document.querySelector(".swiper-indicator");
-          indicator.innerHTML = "";
-
-          const groupCount = Math.ceil(
-            actualSlideCount / this.params.slidesPerGroup
-          );
-          for (let i = 0; i < groupCount; i++) {
-            const dot = document.createElement("div");
-            dot.className = "dot";
-            indicator.appendChild(dot);
-          }
-          updateIndicator(this.realIndex, this.params.slidesPerGroup);
-        },
-        slideChange: function () {
-          updateIndicator(this.realIndex, this.params.slidesPerGroup);
-        },
-      },
-    });
-
-    function updateIndicator(realIndex, slidesPerGroup) {
-      const dots = document.querySelectorAll(".swiper-indicator .dot");
-
-      let groupIndex = Math.floor(realIndex / slidesPerGroup);
-      groupIndex = groupIndex % dots.length;
-
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle("active", idx === groupIndex);
-      });
-    }
-  </script>
-  <script>
-    // 전역 변수로 map 선언
-    var map = null;
-
-    document.addEventListener("DOMContentLoaded", function () {
-      kakao.maps.load(function () {
-        var container = document.getElementById("map");
-        if (!container) return;
-
-        // 한국 서울 시청 좌표
-        var seoulLatLng = new kakao.maps.LatLng(37.5665, 126.978);
-
-        var options = {
-          center: seoulLatLng,
-          level: 3,
-        };
-
-        map = new kakao.maps.Map(container, options);
-
-        // 마커 표시
-        var marker = new kakao.maps.Marker({ position: seoulLatLng });
-        marker.setMap(map);
-
-        // 지도가 깨지는 문제 방지: 충분한 시간 후 relayout 호출
-        setTimeout(function () {
-          if (map) {
-            map.relayout();
-            map.setCenter(seoulLatLng);
-          }
-        }, 500); // 0.5초로 늘림
-
-        // 혹시 탭/드롭다운 안이라면, 보여질 때 map.relayout() 추가 필요
-      });
-    });
-  </script>
 </html>
+
+<script>
+  const actualSlideCount = 6;
+
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    slidesPerGroup: 1,
+    loop: true,
+    loopedSlides: 3,
+    navigation: {
+      nextEl: ".swiper-button-prev",
+      prevEl: ".swiper-button-next",
+    },
+    on: {
+      init: function () {
+        const indicator = document.querySelector(".swiper-indicator");
+        indicator.innerHTML = "";
+
+        const groupCount = Math.ceil(
+          actualSlideCount / this.params.slidesPerGroup
+        );
+        for (let i = 0; i < groupCount; i++) {
+          const dot = document.createElement("div");
+          dot.className = "dot";
+          indicator.appendChild(dot);
+        }
+        updateIndicator(this.realIndex, this.params.slidesPerGroup);
+      },
+      slideChange: function () {
+        updateIndicator(this.realIndex, this.params.slidesPerGroup);
+      },
+    },
+  });
+
+  function updateIndicator(realIndex, slidesPerGroup) {
+    const dots = document.querySelectorAll(".swiper-indicator .dot");
+
+    let groupIndex = Math.floor(realIndex / slidesPerGroup);
+    groupIndex = groupIndex % dots.length;
+
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === groupIndex);
+    });
+  }
+</script>
+<script>
+  var container = document.getElementById("map");
+  var options = {
+    center: new kakao.maps.LatLng(37.485997, 126.897464),
+    level: 3,
+  };
+
+  var map = new kakao.maps.Map(container, options);
+
+  var markerPosition = new kakao.maps.LatLng(37.485997, 126.897464);
+
+  var marker = new kakao.maps.Marker({
+    position: markerPosition,
+  });
+
+  marker.setMap(map);
+</script>
