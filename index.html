@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6f92e2869b88f2373826e1ec15e5061c"
+    ></script>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">LOGO</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" aria-current="page" href="#about">Link One</a>
+
+            <a class="nav-link" href="#services">Link Two</a>
+
+            <a class="nav-link" href="#portfolio">Link Three</a>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Link Four
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Link Five</a></li>
+                <li><a class="dropdown-item" href="#">Link Six</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Link Seven</a>
+                </li>
+              </ul>
+            </li>
+            <a
+              class="nav-link"
+              href="#portfolio"
+              style="
+                border: 1px solid black;
+                background-color: white;
+                color: black;
+              "
+              >Log in</a
+            >
+            <a
+              class="nav-link"
+              href="#portfolio"
+              style="
+                border: 1px solid black;
+                margin-left: 5px;
+                background-color: black;
+                color: white;
+              "
+              >Get started</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--  슬라이드 -->
+
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img
+            src="image/autumn-7493439_960_720.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="image/field-9295186_1280.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="image/nature-9881953_640.webp"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <div
+        class="text-overlay"
+        style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        "
+      >
+        <h1 style="color: white; text-align: center">
+          Describe what makes your <br />
+          compnay unique
+        </h1>
+        <p style="text-align: center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varisu enemi in eors lementum trisitiaeqe
+        </p>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="row" style="margin: 20px auto">
+      <div class="col-6">
+        <p><strong>Tagline</strong></p>
+        <h1><strong>About [company name]</strong></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varisu enemi in eors lementum trisitiaeqeLorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Suspendisse varisu enemi in eors lementum
+          trisitiaeqeLorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Suspendisse varisu enemi in eors lementum trisitiaeqeLorem ipsum dolor
+          sit amet, consectetur adipiscing elit. Suspendisse varisu enemi in
+          eors lementum trisitiaeqeLorem ipsum dolor sit amet, consectetur
+          adipiscing elit. <br /><br />Suspendisse varisu enemi in eors lementum
+          trisitiaeqeLorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Suspendisse varisu enemi in eors lementum trisitiaeqeLorem ipsum dolor
+          sit amet, consectetur adipiscing elit. Suspendisse varisu enemi in
+          eors lementum trisitiaeqe
+        </p>
+      </div>
+      <div class="col-6">
+        <img src="image/la.jpg" alt="" class="d-block w-100" />
+      </div>
+    </div>
+
+    <!-- Introduce your team -->
+
+    <div class="container my-5" style="margin: 0 auto">
+      <p><strong>Tagline</strong></p>
+      <h1><strong>Introduce your team</strong></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card" style="width: 25rem; height: 350px; border: none">
+              <img
+                src="image/img_avatar1.png"
+                class="card-img-top"
+                style="height: 150px; width: 200px; margin-left: 20px"
+                alt="Card 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <strong>Full name</strong><br />Job title
+                </h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eors elementum triseeqt.
+                </p>
+                <img src="image/캡처.PNG" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card" style="width: 25rem; height: 350px; border: none">
+              <img
+                src="image/img_avatar1.png"
+                class="card-img-top"
+                style="height: 150px; width: 200px; margin-left: 20px"
+                alt="Card 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <strong>Full name</strong><br />Job title
+                </h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eors elementum triseeqt.
+                </p>
+                <img src="image/캡처.PNG" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card" style="width: 25rem; height: 350px; border: none">
+              <img
+                src="image/img_avatar1.png"
+                class="card-img-top"
+                style="height: 150px; width: 200px; margin-left: 20px"
+                alt="Card 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <strong>Full name</strong><br />Job title
+                </h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eors elementum triseeqt.
+                </p>
+                <img src="image/캡처.PNG" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card" style="width: 25rem; height: 350px; border: none">
+              <img
+                src="image/img_avatar1.png"
+                class="card-img-top"
+                style="height: 150px; width: 200px; margin-left: 20px"
+                alt="Card 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <strong>Full name</strong><br />Job title
+                </h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eors elementum triseeqt.
+                </p>
+                <img src="image/캡처.PNG" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card" style="width: 25rem; height: 350px; border: none">
+              <img
+                src="image/img_avatar1.png"
+                class="card-img-top"
+                style="height: 150px; width: 200px; margin-left: 20px"
+                alt="Card 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <strong>Full name</strong><br />Job title
+                </h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eors elementum triseeqt.
+                </p>
+                <img src="image/캡처.PNG" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card" style="width: 25rem; height: 350px; border: none">
+              <img
+                src="image/img_avatar1.png"
+                class="card-img-top"
+                style="height: 150px; width: 200px; margin-left: 20px"
+                alt="Card 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <strong>Full name</strong><br />Job title
+                </h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eors elementum triseeqt.
+                </p>
+                <img src="image/캡처.PNG" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-indicator"></div>
+        <div class="swiper-buttons">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <div
+            class="card mb-3"
+            style="max-width: 600px; border-color: white; margin: 0 auto"
+          >
+            <div class="row g-0">
+              <h2 style="text-align: center">★★★★★</h2>
+              <p style="text-align: center">
+                "A customer testimonial that highlights fatures and answers
+                potential <br />customer doubts about your porduct or sevide.
+                Showcase testimonials <br />from a similar demographic to your
+                customers."
+              </p>
+              <div class="col-md-2">
+                <img
+                  src="image/프사.jfif"
+                  class="img-fluid rounded-start"
+                  style="width: 100px; height: 100px"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-5">
+                <div class="card-body">
+                  <h5 class="card-title">Name Surname</h5>
+                  <p class="card-text">Position, Company name</p>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <div
+                  class="d-flex"
+                  style="width: 2px; height: 100px; background-color: black"
+                >
+                  <div class="vr"></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card-body d-flex">
+                  <img
+                    src="image/webflow.png"
+                    alt=""
+                    style="height: 60px; margin-left: -30px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <div
+            class="card mb-3"
+            style="max-width: 600px; border-color: white; margin: 0 auto"
+          >
+            <div class="row g-0">
+              <h2 style="text-align: center">★★★☆☆</h2>
+              <p style="text-align: center">
+                "A customer testimonial that highlights fatures and answers
+                potential <br />customer doubts about your porduct or sevide.
+                Showcase testimonials <br />from a similar demographic to your
+                customers."
+              </p>
+              <div class="col-md-2">
+                <img
+                  src="image/프사.jfif"
+                  class="img-fluid rounded-start"
+                  style="width: 100px; height: 100px"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-5">
+                <div class="card-body">
+                  <h5 class="card-title">Name Surname</h5>
+                  <p class="card-text">Position, Company name</p>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <div
+                  class="d-flex"
+                  style="width: 2px; height: 100px; background-color: black"
+                >
+                  <div class="vr"></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card-body d-flex">
+                  <img
+                    src="image/webflow.png"
+                    alt=""
+                    style="height: 60px; margin-left: -30px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <div
+            class="card mb-3"
+            style="max-width: 600px; border-color: white; margin: 0 auto"
+          >
+            <div class="row g-0">
+              <h2 style="text-align: center">★★★★☆</h2>
+              <p style="text-align: center">
+                "A customer testimonial that highlights fatures and answers
+                potential <br />customer doubts about your porduct or sevide.
+                Showcase testimonials <br />from a similar demographic to your
+                customers."
+              </p>
+              <div class="col-md-2">
+                <img
+                  src="image/프사.jfif"
+                  class="img-fluid rounded-start"
+                  style="width: 100px; height: 100px"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-5">
+                <div class="card-body">
+                  <h5 class="card-title">Name Surname</h5>
+                  <p class="card-text">Position, Company name</p>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <div
+                  class="d-flex"
+                  style="width: 2px; height: 100px; background-color: black"
+                >
+                  <div class="vr"></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card-body d-flex">
+                  <img
+                    src="image/webflow.png"
+                    alt=""
+                    style="height: 60px; margin-left: -30px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin: 20px">
+      <div class="col-6">
+        <p><strong>Tagline</strong></p>
+        <h1><strong>Our Locations</strong></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div
+          class="forline"
+          style="border-left: 2px solid black; text-indent: 20px"
+        >
+          <h1><strong>Sydney</strong></h1>
+          <p>123 Sample St. Sydney NSW 2000 AU</p>
+          <p><strong>View Map</strong></p>
+        </div>
+        <div style="text-indent: 20px">
+          <h1><strong>NewYork</strong></h1>
+          <p>123 Sample St, New York Ny 10000 USA</p>
+          <p><strong>View Map</strong></p>
+        </div>
+        <div style="text-indent: 20px">
+          <h1><strong>London</strong></h1>
+          <p>123 Sample St, London W1C 1DE, United Kingdom</p>
+          <p><strong>View Map</strong></p>
+        </div>
+      </div>
+      <div class="col-6">
+        <div
+          id="map"
+          style="width: 100%; height: 400px; margin-top: 50px"
+        ></div>
+      </div>
+    </div>
+    <div class="row" style="margin: 20px">
+      <div class="col-6">
+        <div class="text-center py-5 header">
+          <!-- p padding Y-axis   패딩 위아래 5 이라는 
+      p-1 4px p-2 8px p-3 16px p-4  24px p-5 48px -->
+          <div class="container-fluid" style="text-align: left">
+            <h1 class="display-5" style="text-align: left">LOGO</h1>
+            <p class="lead">
+              Join our newsletter to stay up to date on features and releases.
+            </p>
+
+            <form class="d-flex justify-content-center mt-4" action="">
+              <div class="input-group input-group-lg w-100">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                  aria-label="Email Address"
+                  required
+                  style="border: 2px solid black"
+                />
+                <button
+                  class="btn btn-danger"
+                  type="submit"
+                  style="
+                    background-color: white;
+                    color: black;
+                    border: 1px solid black;
+                    margin-left: 10px;
+                  "
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+            <p class="lead">
+              By subscribing you agree to with our
+              <a href="">Privacy Policy</a> and provide consent to receive
+              updates from our company.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="container">
+          <div class="row align-items-start">
+            <div class="col">
+              <h5><strong>Column One</strong></h5>
+              <p><br /></p>
+
+              <p>Link one</p>
+              <p>Link two</p>
+              <p>Link three</p>
+              <p>Link four</p>
+              <p>Link five</p>
+            </div>
+            <div class="col">
+              <h5><strong>Column Two</strong></h5>
+              <p><br /></p>
+              <p>Link six</p>
+              <p>Link seven</p>
+              <p>Link eight</p>
+              <p>Link nine</p>
+              <p>Link ten</p>
+            </div>
+            <div class="col">
+              <h5><strong>Follow Us</strong></h5>
+              <p><br /></p>
+              <div class="imglist" style="text-indent: 30px">
+                <p
+                  style="
+                    background: url(image/facebook.png) no-repeat 0 0;
+                    background-size: 20px 20px;
+                  "
+                >
+                  Facebook
+                </p>
+                <p
+                  style="
+                    background: url(image/instagram.png) no-repeat 0 0;
+                    background-size: 20px 20px;
+                  "
+                >
+                  Instagram
+                </p>
+                <p
+                  style="
+                    background: url(image/X.png) no-repeat 0 0;
+                    background-size: 25px 25px;
+                  "
+                >
+                  X
+                </p>
+                <p
+                  style="
+                    background: url(image/in.png) no-repeat 0 0;
+                    background-size: 25px 25px;
+                  "
+                >
+                  Linkedin
+                </p>
+                <p
+                  style="
+                    background: url(image/youtube.png) no-repeat 0 0;
+                    background-size: 25px 25px;
+                  "
+                >
+                  Youtube
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      style="border-top: 2px solid black; height: 200px; margin-left: 20px"
+    >
+      <div class="row">
+        <div class="col-6">
+          <p style="margin-top: 20px">&copy; 2025 KYW All rights reserved.</p>
+        </div>
+        <div class="col-6">
+          <div class="row align-items-start" style="margin-top: 20px">
+            <div class="col">
+              <a href="#">Privacy Policy</a>
+            </div>
+            <div class="col"><a href="#">Terms of Servide</a></div>
+            <div class="col"><a href="#">Cookies Settings</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  const actualSlideCount = 6;
+
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    slidesPerGroup: 1,
+    loop: true,
+    loopedSlides: 3,
+    navigation: {
+      nextEl: ".swiper-button-prev",
+      prevEl: ".swiper-button-next",
+    },
+    on: {
+      init: function () {
+        const indicator = document.querySelector(".swiper-indicator");
+        indicator.innerHTML = "";
+
+        const groupCount = Math.ceil(
+          actualSlideCount / this.params.slidesPerGroup
+        );
+        for (let i = 0; i < groupCount; i++) {
+          const dot = document.createElement("div");
+          dot.className = "dot";
+          indicator.appendChild(dot);
+        }
+        updateIndicator(this.realIndex, this.params.slidesPerGroup);
+      },
+      slideChange: function () {
+        updateIndicator(this.realIndex, this.params.slidesPerGroup);
+      },
+    },
+  });
+
+  function updateIndicator(realIndex, slidesPerGroup) {
+    const dots = document.querySelectorAll(".swiper-indicator .dot");
+
+    let groupIndex = Math.floor(realIndex / slidesPerGroup);
+    groupIndex = groupIndex % dots.length;
+
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === groupIndex);
+    });
+  }
+</script>
+<script>
+  var container = document.getElementById("map");
+  var options = {
+    center: new kakao.maps.LatLng(37.485997, 126.897464),
+    level: 3,
+  };
+
+  var map = new kakao.maps.Map(container, options);
+
+  var markerPosition = new kakao.maps.LatLng(37.485997, 126.897464);
+
+  var marker = new kakao.maps.Marker({
+    position: markerPosition,
+  });
+
+  marker.setMap(map);
+</script>
